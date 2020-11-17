@@ -1,6 +1,4 @@
-# Pavia Quantum Computing, Quantum Simulations & Qiskit Tutorial - Version 1.0.0
-
-(c) 2019, F. Tacchino, C. Macchiavello, D. Gerace
+# Pavia Quantum Computing, Quantum Simulations & Qiskit Tutorial - Version 1.1.0
 
 These Jupyter notebooks were originally designed as support materials for courses in Quantum Computing and Quantum Simulations at the University of Pavia (Department of Physics).
 No prior knowledge or experience in quantum computing is assumed, but standard linear algebra, basic quantum mechanics and some acquaintance with
@@ -8,19 +6,24 @@ python are required to make these tutorials more useful and interesting.
 
 ## Requirements
 
-These notebooks were created and tested under Python 3.6.3 using the Anaconda distribution and the following modules:  
+These notebooks were created and tested under Python 3.6.12 using the Anaconda distribution and the following modules:  
 ```
-qiskit==0.7.0
-matplotlib==2.2.2
-numpy==1.14.3
-scipy==1.1.0
+'qiskit-terra': '0.16.0',
+'qiskit-aer': '0.7.0',
+'qiskit-ignis': '0.5.0',
+'qiskit-ibmq-provider': '0.11.0',
+'qiskit-aqua': '0.8.0',
+'qiskit': '0.23.0'.
+'matplotlib': '3.3.2',
+'numpy': '1.19.2',
+'scipy': '1.5.2'
 ```
 To use the latex-based circuit drawing tool, you will also need the `pdflatex` compiler and the Poppler library appropriate for your operating system (see the documentation of the official Qiskit tutorials for more details).
 Notice that qiskit is currently under active and fast development, and it might undergo some restyling in the future. Compatibility of 
 these tutorials with future releases is attempted but cannot currently be assured.
 
-In order to have access to the cloud-based real IBM quantum processors, you will need an account and an API key on the IBM Quantum Experience 
-(https://quantumexperience.ng.bluemix.net/qx/experience).
+In order to have access to the cloud-based real IBM Quantum processors, you will need an account and an API key on the IBM Quantum Experience 
+(https://quantum-computing.ibm.com/).
 
 ## Installation
 
@@ -42,9 +45,9 @@ In Windows, make sure you have added the Anaconda installation to your `PATH` an
 there is no need to `source` (i.e. the above command is just `activate`). You sould also find a dedicated Anaconda prompt within 
 your installation which is already activated.
 
-After activating Anaconda (optionally, your virtual environment), you can install qiskit v0.7.0 by typing
+After activating Anaconda (optionally, your virtual environment), you can install qiskit by typing
 ```
-pip install qiskit==0.7.0
+pip install qiskit
 ```
 If you do not specify a version, the most recent release will be installed.
 
@@ -72,21 +75,10 @@ containing code, you can run it by hitting `SHIFT+ENTER`. Remember that the note
 execution of some others above them. We suggest you run cells in `Introduction.ipynb` and `Part2.ipynb` one by one, since these notebooks contain interaction with
 the IBMQ servers wich can possibly fail or take a long time. On the other hand, `Part1.ipynb` is probably best read after running all cells first.
 
-### Creating a Qconfig.py
-
-Together with the notebooks, you should find a Qconfig_template.py file. Just fill the required fields with your data from the IBM Quantum Experience,
-in particular add your personal API key, to be able to connect remotely to the IBMQ services. Rename the file to Qconfig.py before using the notebooks.
-
 ### Known bugs
 
 * Some commands, depending on your platform, may raise warnings from the python kernel. They disappear if you run the corresponding cell twice, but you 
 can also filter them with the python  `warnings` module.
-* The  `execute`/`JobMonitor` part for execution on real backends in  `Introduction.ipynb` and `Part2.ipynb` (Bonus track 2) may raise an error like this 
-when ran for the first time on a kernel: 
-    ```
-    AttributeError: module 'ipywidgets' has no attribute 'GridBox'
-    ```
-  The error should disappear if you run the cell again on the same kernel.
 
 ## References & useful materials
 
@@ -116,7 +108,8 @@ __Quantum simulations__
 12. U. Las Heras _et al._, _Digital Quantum Simulation of Spin Systems in Superconducting Circuits_ Phys. Rev. Lett. __112__, 200501 (2014).
 13. Y. Salathé _et al._, _Digital Quantum Simulation of Spin Models with Circuit Quantum Electrodynamics_, Phys. Rev. X __5__, 021027 (2015).
 14. R. Barends _et al._, _Digital quantum simulation of fermionic models with a superconducting circuit_, Nature Communications __6__, 7654 (2015).
-15. A. Chiesa _et al._, _Quantum hardware simulating four-dimensional inelastic neutron scattering_, arXiv:1809.07974 (2018).
+15. A. Chiesa _et al._, _Quantum hardware simulating four-dimensional inelastic neutron scattering_, Nature Physics __15__, 455 (2019).
+16. F. Tacchino _et al._, _Quantum computers as universal quantum simulators: state-of-the art and perspectives_, Adv. Quantum Technol. __3__, 1900052 (2020).
 
 ## Support
 
@@ -125,4 +118,4 @@ for educational purposes, we would appreciate if you could acknowledge it during
 
 ## Disclaimer
 
-The views expressed in these notebooks are those of the authors and do not reflect the official policy or position of IBM or the IBM Q team.
+The views expressed in these notebooks are those of the authors and do not reflect the official policy or position of IBM or the IBM Quantum team.
